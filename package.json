@@ -1,0 +1,47 @@
+{
+  "name": "@yakubique/atils",
+  "version": "0.0.1",
+  "description": "Utils for yakubique's custom Github Actions",
+  "main": "./dist/index.js",
+  "types": "./dist/types.d.ts",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "lint": "eslint . --ext .ts",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "docs:type": "typedoc --out docs/typedoc src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yakubique/atils.git"
+  },
+  "keywords": [
+    "utils",
+    "github-actions"
+  ],
+  "author": "Vladimir <opa-oz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yakubique/atils/issues"
+  },
+  "homepage": "https://github.com/yakubique/atils#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.20",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typedoc": "^0.25.8",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "nanoid": "^5.0.6"
+  }
+}
