@@ -4,9 +4,11 @@ import path from 'node:path';
 import { nanoid } from 'nanoid';
 import checks from './checks';
 
-const tempDir = fs.realpathSync(os.tmpdir());
+const getPath = (prefix = '') => {
+  const tempDir = fs.realpathSync(os.tmpdir());
 
-const getPath = (prefix = '') => path.join(tempDir, prefix + nanoid());
+  return path.join(tempDir, prefix + nanoid());
+};
 
 function temporaryDirectory({ prefix = '' } = {}) {
   const directory = getPath(prefix);

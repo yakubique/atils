@@ -13,7 +13,8 @@
     "strict": true,
     "noImplicitAny": true,
     "types": [
-      "node"
+      "node",
+      "jest"
     ],
     "esModuleInterop": true,
     "resolveJsonModule": true,
@@ -24,6 +25,9 @@
     "./src"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "./__tests__",
+    "./coverage",
+    "./dist"
   ]
 }

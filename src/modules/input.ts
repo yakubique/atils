@@ -3,7 +3,7 @@ import * as core from '@actions/core';
 import checks from './checks';
 import { readFileSync } from 'node:fs';
 
-const Y_ARRAY = ['y', 'yes', 't', 'true', 'e', 'enable', 'enabled', 'on', 'ok', '1'];
+export const Y_ARRAY = ['y', 'yes', 't', 'true', 'e', 'enable', 'enabled', 'on', 'ok', '1'];
 
 function getBooleanInput(name: string, options?: InputOptions): boolean {
   const value = core.getInput(name, options);
